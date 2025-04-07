@@ -64,7 +64,6 @@ export default function PaperComp() {
   return (
     <PaperProvider>
       <SafeAreaView style={styles.container}>
-        <ScrollView>
         <View style={styles.topcontainer}>
           <TouchableOpacity onPress={toggleDrawer}>
             <Avatar.Image
@@ -176,7 +175,7 @@ export default function PaperComp() {
             <Text>Click outside this area to dismiss.</Text>
           </Modal>
         </Portal>
-        </ScrollView>
+       
         <View style={styles.nxtcontainer}>
           <TouchableOpacity
             style={styles.nxtbtn}
@@ -259,12 +258,14 @@ const styles = StyleSheet.create({
   },
   nxtcontainer: {
     marginLeft: width * 0.75,
-    marginTop: height * 0.15,
+    marginBottom: height * 0.05,
+
   },
   chipcontainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 8,
     marginTop: height * 0.03,
+    bottom:0,
   },
 });
