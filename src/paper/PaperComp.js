@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
   Pressable,
+  ScrollView,
 } from 'react-native';
 import {
   Avatar,
@@ -63,6 +64,7 @@ export default function PaperComp() {
   return (
     <PaperProvider>
       <SafeAreaView style={styles.container}>
+        <ScrollView>
         <View style={styles.topcontainer}>
           <TouchableOpacity onPress={toggleDrawer}>
             <Avatar.Image
@@ -174,6 +176,7 @@ export default function PaperComp() {
             <Text>Click outside this area to dismiss.</Text>
           </Modal>
         </Portal>
+        </ScrollView>
         <View style={styles.nxtcontainer}>
           <TouchableOpacity
             style={styles.nxtbtn}
